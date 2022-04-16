@@ -4,6 +4,7 @@ Question 1:
 > git init
 Initialized empty Git repository in C:/Users/Refresh_Pc/BIHE_Web_Programming/git-repo/.git/
 
+
 2)
 > echo Hello World! > test.txt
 
@@ -13,6 +14,7 @@ Initialized empty Git repository in C:/Users/Refresh_Pc/BIHE_Web_Programming/git
 [master (root-commit) 2a86bc4] first commit
  1 file changed, 1 insertion(+)
  create mode 100644 test.txt
+ 
  
 3)
 > tree .git
@@ -34,6 +36,7 @@ C:\USERS\REFRESH_PC\BIHE_WEB_PROGRAMMING\GIT-REPO\.GIT
     ├───heads
     └───tags
 
+
 4)
 > git cat-file -t 36f0fc755f90a07a5ccc557487459886abd57309
 tree
@@ -53,6 +56,7 @@ author Elnaz MohajerAnsari <elnazmohajeransari@gmail.com> 1650114782 +0430
 committer Elnaz MohajerAnsari <elnazmohajeransari@gmail.com> 1650114782 +0430
 
 first commit
+
 
 5)
 .git/HEAD --> ref: refs/heads/master
@@ -80,6 +84,7 @@ branch 'question2' set up to track 'origin/question2'.
 > git ls-files -s
 100644 980a0d5f19a64b4b30a87d4206aade58726b60e3 0       hello.txt
 
+
 2)
 "a Change to this file"
 > git add -p
@@ -92,10 +97,12 @@ index 980a0d5..1966876 100644
 +a Change to this file
 (1/1) Stage this hunk [y,n,q,a,d,e,?]? y
 
+
 3)
 > git reset
 Unstaged changes after reset:
 M       hello.txt
+
 
 4)
 > git stash save "a message for my stash"
@@ -132,6 +139,7 @@ branch 'question3' set up to track 'origin/question3'.
 1)
 > ref: refs/heads/question3
 
+
 2)
 > git show-ref
 84f33bb71faa62192b2362ad0ef66fb7d972e447 refs/heads/master
@@ -144,6 +152,7 @@ ca2b179271e9bab6fbad70d459f929e20f381df6 refs/heads/question2
 84f33bb71faa62192b2362ad0ef66fb7d972e447 refs/remotes/origin/question4
 87cba9c704760c7922a5a07ad3cbe7d6ccbd245e refs/remotes/origin/question5
 32363e6eb5849286e23af01ca70edfaf11d7d4e0 refs/stash
+
 
 3)
 > git tag lightweight-tag
@@ -162,6 +171,7 @@ index 980a0d5..b31a35b 100644
 @@ -1 +1,2 @@
  Hello World!
 +This is a test of the emergency git-casting system.
+
 
 4)
 > git tag -a annotated-tag -m "my first annotated tag"
@@ -187,6 +197,7 @@ index 980a0d5..b31a35b 100644
  Hello World!
 +This is a test of the emergency git-casting system.
 
+
 5)
 > git checkout 19f9daed9feb5c5e5ee8149f9677505af7bec379
 Note: switching to '19f9daed9feb5c5e5ee8149f9677505af7bec379'.
@@ -207,6 +218,7 @@ Or undo this operation with:
 Turn off this advice by setting config variable advice.detachedHead to false
 
 HEAD is now at 19f9dae add update for question 3
+ 
 
 6)
 "new commit"
@@ -266,6 +278,7 @@ Date:   Thu Apr 7 16:26:47 2022 +0430
 
     initial commit
 
+ 
 2)
 > git reset --hard HEAD^
 HEAD is now at 19f9dae add update for question 3
@@ -286,5 +299,159 @@ Date:   Thu Apr 7 16:26:47 2022 +0430
 
     initial commit
 
+ 
 3)
+
+------------------------------------------------------------------------------------------------------
+
+Question 5:
+
+> git checkout question5
+Switched to a new branch 'question5'
+branch 'question5' set up to track 'origin/question5'.
+
+1)
+> git add *
+ 
+> git commit -m "Q5 first commit"
+[question5 c20b47b] Q5 first commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+ 
+2)
+> git log
+commit c20b47b4b54271b11ee4d40058bdd588d62514bb (HEAD -> question5)
+Author: Elnaz MohajerAnsari <elnazmohajeransari@gmail.com>
+Date:   Sat Apr 16 18:21:28 2022 +0430
+
+    Q5 first commit
+
+commit 87cba9c704760c7922a5a07ad3cbe7d6ccbd245e (origin/question5)
+Author: Idin Khayami <idin.khanoom.khayami@gmail.com>
+Date:   Thu Apr 7 16:35:47 2022 +0430
+
+    add update for question 5
+
+commit 84f33bb71faa62192b2362ad0ef66fb7d972e447 (origin/question4, origin/question2, origin/master, origin/HEAD, master)
+Author: Idin Khayami <idin.khanoom.khayami@gmail.com>
+Date:   Thu Apr 7 16:26:47 2022 +0430
+
+    initial commit
+
+
+"hello.txt --> world.txt"
+> git add *
+ 
+> git commit -m "Rename the file"
+[question5 edaacb2] Rename the file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename hello.txt => world.txt (100%)
+
+ 
+> git log --name-status
+commit edaacb2f30a9240ab3d2418d7e02322304387bbd (HEAD -> question5)
+Author: Elnaz MohajerAnsari <elnazmohajeransari@gmail.com>
+Date:   Sat Apr 16 18:40:53 2022 +0430
+
+    Rename the file
+
+R100    hello.txt       world.txt
+
+commit c20b47b4b54271b11ee4d40058bdd588d62514bb
+Author: Elnaz MohajerAnsari <elnazmohajeransari@gmail.com>
+Date:   Sat Apr 16 18:21:28 2022 +0430
+
+    Q5 first commit
+
+M       hello.txt
+
+commit 87cba9c704760c7922a5a07ad3cbe7d6ccbd245e (origin/question5)
+Author: Idin Khayami <idin.khanoom.khayami@gmail.com>
+Date:   Thu Apr 7 16:35:47 2022 +0430
+
+    add update for question 5
+
+M       hello.txt
+
+commit 84f33bb71faa62192b2362ad0ef66fb7d972e447 (origin/question4, origin/question2, origin/master, origin/HEAD, master)
+Author: Idin Khayami <idin.khanoom.khayami@gmail.com>
+Date:   Thu Apr 7 16:26:47 2022 +0430
+
+    initial commit
+
+A       hello.txt
+
+
+> git log --follow world.txt
+commit edaacb2f30a9240ab3d2418d7e02322304387bbd (HEAD -> question5)
+Author: Elnaz MohajerAnsari <elnazmohajeransari@gmail.com>
+Date:   Sat Apr 16 18:40:53 2022 +0430
+
+    Rename the file
+
+commit c20b47b4b54271b11ee4d40058bdd588d62514bb
+Author: Elnaz MohajerAnsari <elnazmohajeransari@gmail.com>
+Date:   Sat Apr 16 18:21:28 2022 +0430
+
+    Q5 first commit
+
+commit 87cba9c704760c7922a5a07ad3cbe7d6ccbd245e (origin/question5)
+Author: Idin Khayami <idin.khanoom.khayami@gmail.com>
+Date:   Thu Apr 7 16:35:47 2022 +0430
+
+    add update for question 5
+
+commit 84f33bb71faa62192b2362ad0ef66fb7d972e447 (origin/question4, origin/question2, origin/master, origin/HEAD, master)
+Author: Idin Khayami <idin.khanoom.khayami@gmail.com>
+Date:   Thu Apr 7 16:26:47 2022 +0430
+
+    initial commit
+
+
+> git log --grep "first"
+commit c20b47b4b54271b11ee4d40058bdd588d62514bb
+Author: Elnaz MohajerAnsari <elnazmohajeransari@gmail.com>
+Date:   Sat Apr 16 18:21:28 2022 +0430
+
+    Q5 first commit
+
+
+> git log --diff-filter=RM
+commit edaacb2f30a9240ab3d2418d7e02322304387bbd (HEAD -> question5)
+Author: Elnaz MohajerAnsari <elnazmohajeransari@gmail.com>
+Date:   Sat Apr 16 18:40:53 2022 +0430
+
+    Rename the file
+
+commit c20b47b4b54271b11ee4d40058bdd588d62514bb
+Author: Elnaz MohajerAnsari <elnazmohajeransari@gmail.com>
+Date:   Sat Apr 16 18:21:28 2022 +0430
+
+    Q5 first commit
+
+commit 87cba9c704760c7922a5a07ad3cbe7d6ccbd245e (origin/question5)
+Author: Idin Khayami <idin.khanoom.khayami@gmail.com>
+Date:   Thu Apr 7 16:35:47 2022 +0430
+
+    add update for question 5
+
+
+3)
+> git show 906e42c773172d110db25abde9503d4ccbdf3ffb
+tree 906e42c773172d110db25abde9503d4ccbdf3ffb
+
+hello.txt
+
+
+4) 
+> git branch --merged
+  master
+* question5
+
+> git branch --no-merged
+  question2
+  question3
+  question4
+
+
 
