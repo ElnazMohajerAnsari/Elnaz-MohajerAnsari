@@ -1,0 +1,67 @@
+Question 1:
+
+1)
+> git init
+
+Initialized empty Git repository in C:/Users/Refresh_Pc/BIHE_Web_Programming/git-repo/.git/
+
+
+2)
+> echo Hello World! > test.txt
+
+
+> git add test.txt
+
+
+> git commit -m "first commit"
+
+[master (root-commit) 2a86bc4] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+ 
+ 
+3)
+> tree .git
+Folder PATH listing for volume Win 10 Pro
+Volume serial number is 4E50-B07B
+C:\USERS\REFRESH_PC\BIHE_WEB_PROGRAMMING\GIT-REPO\.GIT
+├───hooks
+├───info
+├───logs
+│   └───refs
+│       └───heads
+├───objects
+│   ├───2a
+│   ├───36
+│   ├───41
+│   ├───info
+│   └───pack
+└───refs
+    ├───heads
+    └───tags
+
+
+4)
+> git cat-file -t 36f0fc755f90a07a5ccc557487459886abd57309
+tree
+> git cat-file -p 36f0fc755f90a07a5ccc557487459886abd57309
+100644 blob 4110295ca67d265b328d87a764601115dcc6d2c0    test.txt
+
+> git cat-file -t 4110295ca67d265b328d87a764601115dcc6d2c0
+blob
+> git cat-file -p 4110295ca67d265b328d87a764601115dcc6d2c0
+Hello World!
+
+> git cat-file -t 2a86bc4cd11cbce8380fc4b1a8bbf58667ae4503
+commit
+> git cat-file -p 2a86bc4cd11cbce8380fc4b1a8bbf58667ae4503
+tree 36f0fc755f90a07a5ccc557487459886abd57309
+author Elnaz MohajerAnsari <elnazmohajeransari@gmail.com> 1650114782 +0430
+committer Elnaz MohajerAnsari <elnazmohajeransari@gmail.com> 1650114782 +0430
+
+first commit
+
+
+5)
+.git/HEAD --> ref: refs/heads/master
+.git/refs/heads/master --> 2a86bc4cd11cbce8380fc4b1a8bbf58667ae4503
