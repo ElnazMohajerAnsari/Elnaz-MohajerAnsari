@@ -1,0 +1,86 @@
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 325px;
+    height: 550px;
+    margin: 0 auto 100px;
+    text-align: center;
+    border: 2px solid darkgray;
+}
+
+.form .head1 {
+    margin-top: -1px;
+    /*margin-bottom: 25px;*/
+    text-align: left;
+    background-color: steelblue;
+    color: white;
+    height: 40px;
+    padding-top: 1px;
+    padding-bottom: 5px;
+}
+
+.form .head2 {
+    text-align: left;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+.form input {
+    outline: 0;
+    background: whitesmoke;
+    width: 85%;
+    border: none;
+    border-bottom: 1px solid darkgray;
+    margin: 0 0 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+.form #i2 {
+    height: 100px;
+}
+
+.form button {
+    background-color: steelblue;
+    width: 85%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+#icon {
+    font-size: 20px;
+    margin-right: 5px;
+    color: white;
+}
+
+.form .head3 {
+    text-align: left;
+    background-color: steelblue;
+    color: white;
+    height: 45%;
+    padding-top: 1px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    border-radius: 15px 15px 0 0;
+}
+
+.form .scroll {
+    overflow-y: scroll;
+    height: 80%;
+    background: lightsteelblue;
+    font-size: 13px;
+    border-radius: 15px 15px 0 0;
+    text-align: left;
+    color: black;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
