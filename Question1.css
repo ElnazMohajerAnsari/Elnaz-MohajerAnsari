@@ -1,0 +1,18 @@
+.button {
+    background-color: #F1A95C;
+    border: 2px solid grey;
+    display: flex;
+    cursor: pointer;
+}
+
+#icon {
+    font-size: 40px;
+    margin-left: 5px;
+    color: white;
+}
+
+.text {
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 15px;
+}
