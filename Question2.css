@@ -1,0 +1,14 @@
+.circle {
+    height: 150px;
+    width: 150px;
+    border: 5px dotted green;
+    border-radius: 100%;
+    animation: spin 7s linear infinite;
+    text-align:center;
+    position:relative;
+    display: flex;
+}
+
+@keyframes spin {
+    100% { transform: rotateZ(360deg); }
+}
