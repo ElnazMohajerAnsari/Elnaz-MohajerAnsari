@@ -9,6 +9,13 @@
     display: flex;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
 @keyframes spin {
     100% { transform: rotateZ(360deg); }
 }
