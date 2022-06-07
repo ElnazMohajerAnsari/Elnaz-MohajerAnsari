@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO List</title>
+        <meta charset="UTF-8">
+        <script src="todo.js"></script>
+        <style>
+            .todo-item{
+                background: #eeeeee;
+            }
+            .todo-item.done{
+                background: #0d6601;
+            }
+            .todo-item span{
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>My Todo List</h1>
+
+        <form>
+            <label for="title-input">New Todo</label>
+            <input type="text" name="title" id="title-input">
+            <button id="add-button" onclick="addNewTodo(event)">Add</button>
+        </form>
+
+        <ul id="todo-list"></ul>
+    </body>
+</html>
