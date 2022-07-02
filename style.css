@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-size: 16px;
+    text-align: center;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+h1 {
+    padding: 24px;
+    color: black;
+    margin-bottom: 100px;
+    background-color: rgb(140, 190, 140);
+}
+
+#input {
+    margin: 8px;
+    padding: 12px;
+    border-radius: 24px;
+    border-color: black;
+}
+
+#button {
+    margin: 8px;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 24px;
+    background-color: rgb(140, 190, 140);
+}
